@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reserva una pista o publica un partido abierto en MatchCourt.">
+  <title>Nueva reserva · MatchCourt</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="sidebar">
+      <a class="logo" href="../index.html"><span class="logo__mark">M</span> MatchCourt</a>
+      <button class="menu-toggle" id="btn-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar-nav">☰</button>
+      <nav class="sidebar__nav" id="sidebar-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a class="nav-link" href="../index.html">🏠 Inicio</a></li>
+          <li><a class="nav-link" href="../index.html#partidos">🔍 Buscar partidos</a></li>
+          <li><a class="nav-link" href="reservas.html">📅 Mis reservas</a></li>
+          <li><a class="nav-link" href="perfil.html">👤 Perfil</a></li>
+        </ul>
+      </nav>
+      <a class="user" href="perfil.html">
+        <span class="user__avatar" aria-hidden="true">CR</span>
+        <span>Carlos Ruiz<small>Ver perfil</small></span>
+      </a>
+    </header>
+
+    <main class="content">
+      <header class="page-head">
+        <div>
+          <h1>Nueva reserva</h1>
+          <p class="muted">Elige deporte, pista y horario. Puedes dejar el partido abierto para que se apunte más gente.</p>
+        </div>
+      </header>
+
+      <section aria-labelledby="t-form">
+        <h2 class="visually-hidden" id="t-form">Formulario de reserva</h2>
+        <form class="card form" action="reservas.html" method="get" data-validar data-exito="Tu reserva se ha registrado correctamente.">
+          <fieldset class="field">
+            <legend>Tipo</legend>
+            <div class="choice-group">
+              <label class="choice"><input type="radio" name="tipo" value="reserva" checked> Solo reservar pista</label>
+              <label class="choice"><input type="radio" name="tipo" value="abierto"> Publicar partido abierto</label>
+            </div>
+          </fieldset>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="deporte">Deporte</label>
+              <select class="input" id="deporte" name="deporte" required>
+                <option value="">Selecciona…</option>
+                <option>Pádel</option>
+                <option>Tenis</option>
+                <option>Fútbol 7</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="club">Club / pista</label>
+              <select class="input" id="club" name="club" required>
+                <option value="">Selecciona…</option>
+                <option>Urban Padel Center</option>
+                <option>Club Tenis Norte</option>
+                <option>Campo Municipal</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="fecha">Fecha</label>
+              <input class="input" type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="field">
+              <label for="hora">Hora</label>
+              <input class="input" type="time" id="hora" name="hora" required>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="jugadores">Nº de jugadores</label>
+              <input class="input" type="number" id="jugadores" name="jugadores" min="2" max="14" value="4">
+            </div>
+            <div class="field">
+              <label for="nivel">Nivel</label>
+              <select class="input" id="nivel" name="nivel">
+                <option>Principiante</option>
+                <option selected>Intermedio</option>
+                <option>Avanzado</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="notas">Notas (opcional)</label>
+            <textarea class="input" id="notas" name="notas" placeholder="Trae pelotas nuevas, nivel flexible…"></textarea>
+          </div>
+
+          <div class="form__row">
+            <a class="btn btn--outline" href="../index.html">Cancelar</a>
+            <button class="btn btn--primary" type="submit">Confirmar reserva</button>
+          </div>
+        </form>
+      </section>
+
+      <footer class="app-footer">© 2026 MatchCourt · Proyecto Interdisciplinar 2</footer>
+    </main>
+  </div>
+  <script src="../js/mockData.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

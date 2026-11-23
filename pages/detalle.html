@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ficha detallada del partido: horario, pista, jugadores y precio.">
+  <title>Detalle del partido · MatchCourt</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="sidebar">
+      <a class="logo" href="../index.html"><span class="logo__mark">M</span> MatchCourt</a>
+      <button class="menu-toggle" id="btn-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar-nav">☰</button>
+      <nav class="sidebar__nav" id="sidebar-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a class="nav-link" href="../index.html">🏠 Inicio</a></li>
+          <li><a class="nav-link" href="../index.html#partidos">🔍 Buscar partidos</a></li>
+          <li><a class="nav-link" href="reservas.html" aria-current="page">📅 Mis reservas</a></li>
+          <li><a class="nav-link" href="perfil.html">👤 Perfil</a></li>
+        </ul>
+      </nav>
+      <a class="user" href="perfil.html">
+        <span class="user__avatar" aria-hidden="true">CR</span>
+        <span>Carlos Ruiz<small>Ver perfil</small></span>
+      </a>
+    </header>
+
+    <main class="content">
+      <nav aria-label="Migas de pan">
+        <a class="link" href="reservas.html">← Volver a mis reservas</a>
+      </nav>
+
+      <div class="detail">
+        <article class="stack">
+          <header class="detail__hero">
+            <div>
+              <span class="badge">Confirmada</span>
+              <h1>Pádel · Urban Padel Center</h1>
+            </div>
+          </header>
+
+          <section class="card" aria-labelledby="t-info">
+            <h2 class="section-title" id="t-info">Información</h2>
+            <dl class="info-grid mt-3">
+              <div><dt>Fecha</dt><dd>Hoy, 28 oct</dd></div>
+              <div><dt>Hora</dt><dd>18:30 – 20:00</dd></div>
+              <div><dt>Pista</dt><dd>Pista 3 (cubierta)</dd></div>
+              <div><dt>Nivel</dt><dd>3.5 · Intermedio</dd></div>
+              <div><dt>Dirección</dt><dd>Calle Mayor 12, Valencia</dd></div>
+              <div><dt>Organiza</dt><dd>Carlos Ruiz</dd></div>
+            </dl>
+          </section>
+
+          <section class="card" aria-labelledby="t-jug">
+            <h2 class="section-title" id="t-jug">Jugadores (3/4)</h2>
+            <ul class="players mt-3">
+              <li><span class="user__avatar" aria-hidden="true">CR</span> Carlos</li>
+              <li><span class="user__avatar" aria-hidden="true">AM</span> Ana</li>
+              <li><span class="user__avatar" aria-hidden="true">LP</span> Luis</li>
+              <li class="free"><span class="user__avatar" aria-hidden="true">+</span> Plaza libre</li>
+            </ul>
+          </section>
+
+          <section class="card" aria-labelledby="t-notas">
+            <h2 class="section-title" id="t-notas">Notas</h2>
+            <p class="muted mt-2">Partido amistoso. Traed pelotas nuevas; el club tiene vestuarios y bar.</p>
+          </section>
+        </article>
+
+        <aside class="card summary" aria-labelledby="t-resumen">
+          <h2 class="section-title" id="t-resumen">Resumen</h2>
+          <p class="summary__row"><span>Pista (90 min)</span><span>24,00 €</span></p>
+          <p class="summary__row"><span>Entre 4 jugadores</span><span>÷ 4</span></p>
+          <p class="summary__row summary__total"><span>Tu parte</span><span>6,00 €</span></p>
+          <button type="button" class="btn btn--primary btn--block" data-accion="unirse-partido">Unirme al partido</button>
+          <button type="button" class="btn btn--danger btn--block" data-accion="cancelar-reserva">Cancelar reserva</button>
+        </aside>
+      </div>
+
+      <footer class="app-footer">© 2026 MatchCourt · Proyecto Interdisciplinar 2</footer>
+    </main>
+  </div>
+  <script src="../js/mockData.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

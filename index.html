@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MatchCourt: reserva pistas y encuentra partidos de pádel, tenis y fútbol 7 cerca de ti.">
+  <title>Inicio · MatchCourt (Hito 2)</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="sidebar">
+      <a class="logo" href="index.html"><span class="logo__mark">M</span> MatchCourt</a>
+      <button class="menu-toggle" id="btn-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar-nav">☰</button>
+      <nav class="sidebar__nav" id="sidebar-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a class="nav-link" href="index.html" aria-current="page">🏠 Inicio</a></li>
+          <li><a class="nav-link" href="index.html#partidos">🔍 Buscar partidos</a></li>
+          <li><a class="nav-link" href="pages/reservas.html">📅 Mis reservas</a></li>
+          <li><a class="nav-link" href="pages/perfil.html">👤 Perfil</a></li>
+        </ul>
+      </nav>
+      <a class="user" href="pages/perfil.html">
+        <span class="user__avatar" aria-hidden="true">CR</span>
+        <span>Carlos Ruiz<small>Ver perfil</small></span>
+      </a>
+    </header>
+
+    <main class="content">
+      <header class="page-head">
+        <div>
+          <h1>Hola, Carlos 👋</h1>
+          <p class="muted">¿Qué te apetece jugar hoy?</p>
+        </div>
+        <a class="btn btn--primary" href="pages/crear.html">+ Nueva reserva</a>
+      </header>
+
+      <section aria-labelledby="t-resumen">
+        <h2 class="visually-hidden" id="t-resumen">Resumen de actividad</h2>
+        <ul class="stats">
+          <li class="card stat"><strong>4</strong><span>Próximas reservas</span></li>
+          <li class="card stat"><strong>2</strong><span>Partidos esta semana</span></li>
+          <li class="card stat"><strong>8</strong><span>Partidos jugados</span></li>
+        </ul>
+      </section>
+
+      <section class="actions" aria-labelledby="t-acciones">
+        <h2 class="visually-hidden" id="t-acciones">Acciones rápidas</h2>
+        <article class="card action action--dark">
+          <h3>Reservar una pista</h3>
+          <p>Consulta disponibilidad y reserva en un minuto.</p>
+          <a class="link" href="pages/crear.html">Reservar →</a>
+        </article>
+        <article class="card action">
+          <h3>Buscar un partido</h3>
+          <p>Únete a partidos abiertos de tu nivel cerca de ti.</p>
+          <a class="link" href="#partidos">Ver partidos →</a>
+        </article>
+      </section>
+
+      <section id="partidos" aria-labelledby="t-partidos">
+        <div class="section-head">
+          <h2 class="section-title" id="t-partidos">Partidos disponibles cerca de ti</h2>
+        </div>
+
+        <div class="filter-bar">
+          <input class="input" type="search" id="buscador-partidos" placeholder="Buscar por deporte, club o nivel..." aria-label="Buscar partidos">
+          <select class="input" id="filtro-deporte" aria-label="Filtrar por deporte">
+            <option value="todos">Todos los deportes</option>
+            <option value="Pádel">Pádel</option>
+            <option value="Tenis">Tenis</option>
+            <option value="Fútbol 7">Fútbol 7</option>
+          </select>
+        </div>
+
+        <ul class="match-list" id="lista-partidos"></ul>
+        <p class="muted" id="sin-resultados" hidden>No se encontraron partidos con esos filtros.</p>
+      </section>
+
+      <footer class="app-footer">© 2026 MatchCourt · Proyecto Interdisciplinar 2</footer>
+    </main>
+  </div>
+  <script src="js/mockData.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

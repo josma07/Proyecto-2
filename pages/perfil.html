@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tu perfil en MatchCourt: datos personales, deportes y niveles.">
+  <title>Mi perfil · MatchCourt</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="sidebar">
+      <a class="logo" href="../index.html"><span class="logo__mark">M</span> MatchCourt</a>
+      <button class="menu-toggle" id="btn-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar-nav">☰</button>
+      <nav class="sidebar__nav" id="sidebar-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a class="nav-link" href="../index.html">🏠 Inicio</a></li>
+          <li><a class="nav-link" href="../index.html#partidos">🔍 Buscar partidos</a></li>
+          <li><a class="nav-link" href="reservas.html">📅 Mis reservas</a></li>
+          <li><a class="nav-link" href="perfil.html" aria-current="page">👤 Perfil</a></li>
+        </ul>
+      </nav>
+      <a class="user" href="perfil.html">
+        <span class="user__avatar" aria-hidden="true">CR</span>
+        <span>Carlos Ruiz<small>Ver perfil</small></span>
+      </a>
+    </header>
+
+    <main class="content">
+      <header class="page-head">
+        <div>
+          <h1>Mi perfil</h1>
+          <p class="muted">Gestiona tus datos y tus deportes.</p>
+        </div>
+      </header>
+
+      <div class="profile">
+        <aside class="card profile__summary" aria-labelledby="t-resumen">
+          <span class="user__avatar" aria-hidden="true">CR</span>
+          <h2 class="section-title" id="t-resumen">Carlos Ruiz</h2>
+          <p class="muted">Miembro desde septiembre 2026</p>
+          <a class="btn btn--primary btn--block" href="perfil.html">Editar perfil</a>
+          <a class="btn btn--danger btn--block" href="login.html">Cerrar sesión</a>
+        </aside>
+
+        <div class="stack">
+          <section class="card" aria-labelledby="t-datos">
+            <h2 class="section-title" id="t-datos">Datos personales</h2>
+            <dl class="data-list mt-3">
+              <div><dt>Email</dt><dd>carlos.ruiz@email.com</dd></div>
+              <div><dt>Teléfono</dt><dd>+34 612 345 678</dd></div>
+            </dl>
+          </section>
+
+          <section class="card" aria-labelledby="t-dep">
+            <h2 class="section-title" id="t-dep">Mis deportes y niveles</h2>
+            <ul class="sport-list mt-2">
+              <li><span>🎾 Pádel</span><span class="badge">Intermedio</span></li>
+              <li><span>🏸 Tenis</span><span class="badge badge--info">Principiante</span></li>
+              <li><span>⚽ Fútbol 7</span><span class="badge">Intermedio</span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <footer class="app-footer">© 2026 MatchCourt · Proyecto Interdisciplinar 2</footer>
+    </main>
+  </div>
+  <script src="../js/mockData.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
